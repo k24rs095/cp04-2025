@@ -183,14 +183,14 @@
     // ButtonAがクリックされた時の処理
     function btnAClick(e){
         active = true;
-        startTime = new Date();
+        startTime = new Date() - etime * 1000;
         $("#btnB").prop("disabled", false);
     }
 
     // ButtonBがクリックされた時の処理
     function btnBClick(e){
         active = false;
-        
+
     }
 
     // ButtonCがクリックされた時の処理
@@ -203,6 +203,7 @@
         $("#remain").html("残り時間: " + period);
         $("#btnA").prop("disabled", false);
         $("#btnB").prop("disabled", true);
+        etime = 0;
     }
     
  
